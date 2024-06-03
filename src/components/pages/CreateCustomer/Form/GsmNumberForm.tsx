@@ -12,7 +12,7 @@ export const GSMNumberForm: React.FC = () => {
   const {
     control,
     formState: { errors },
-  } = useFormContext<{ GSMNumber: string }>() ?? {};
+  } = useFormContext<{ GSMNumber: string }>();
 
   return (
     <FormControl isInvalid={!!errors.GSMNumber}>

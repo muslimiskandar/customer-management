@@ -22,21 +22,31 @@ export const TransactionsList: React.FC<IProps> = ({
           Tranzaksiyalar
         </Text>
       </HStack>
-      {customerTransactionsResponse?.map((el) => (
-        <HStack width="90%" justifyContent="space-between" p="1rem" bg="#fff">
-          <HStack>
-            <FaMoneyBillTransfer color="green" fontSize="30px" />
-            <Text fontSize="md" fontWeight="bold">
-              {el.TransactionAmount}
-            </Text>
+      {customerTransactionsResponse?.length ? (
+        customerTransactionsResponse?.map((el) => (
+          <HStack width="90%" justifyContent="space-between" p="1rem" bg="#fff">
+            <HStack>
+              <FaMoneyBillTransfer color="green" fontSize="30px" />
+              <Text fontSize="md" fontWeight="bold">
+                {el.TransactionAmount}
+              </Text>
+            </HStack>
+            <HStack>
+              <Text fontSize="md" fontWeight="bold">
+                {el.TransactionDate}
+              </Text>
+            </HStack>
           </HStack>
-          <HStack>
-            <Text fontSize="md" fontWeight="bold">
-              {el.TransactionDate}
+        ))
+      ) : (
+        <HStack width="90%" justifyContent="space-between" p="1rem">
+          <HStack justifyContent="center" width="100%">
+            <Text fontSize="md" textAlign="center">
+              Yeni müştəri olduğu üçün tranzaksiya tapılmadı
             </Text>
           </HStack>
         </HStack>
-      ))}
+      )}
     </VStack>
   );
 };

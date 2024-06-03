@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 export const SearchForm: React.FC = () => {
-  const { control } = useFormContext<TSearchBar>() ?? {};
+  const { control } = useFormContext<TSearchBar>();
 
   return (
     <InputGroup>

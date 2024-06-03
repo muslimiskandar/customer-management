@@ -10,7 +10,7 @@ export const NameForm: React.FC = () => {
   const {
     control,
     formState: { errors },
-  } = useFormContext<{ Name: string }>() ?? {};
+  } = useFormContext<{ Name: string }>();
 
   return (
     <FormControl isInvalid={!!errors.Name}>

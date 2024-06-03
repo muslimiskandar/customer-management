@@ -10,7 +10,7 @@ export const DateForm: React.FC = () => {
   const {
     control,
     formState: { errors },
-  } = useFormContext<{ BirthDate: string }>() ?? {};
+  } = useFormContext<{ BirthDate: string }>();
 
   return (
     <FormControl isInvalid={!!errors.BirthDate}>
