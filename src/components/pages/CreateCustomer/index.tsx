@@ -46,7 +46,9 @@ export const CreateCustomer: React.FC = () => {
           justifyContent="space-between"
         >
           <FormProvider {...methods}>
-            <Text fontSize="2xl">Yeni müştəri yaradılması</Text>
+            <Text fontSize="2xl" mb="-30px">
+              Yeni müştəri yaradılması
+            </Text>
             <NameForm />
             <SurnameForm />
             <DateForm />
